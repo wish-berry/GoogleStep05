@@ -227,6 +227,7 @@ public class Homework{
         }
 
 
+        long start_time = System.currentTimeMillis();
         String input_file_path = args[0];
         String folder_path = new File(input_file_path).getParent();
 
@@ -258,10 +259,12 @@ public class Homework{
         /* 出力 */
         output_result(output_file_path);
 
+        long end_time = System.currentTimeMillis();
 
         System.out.println(allway);
         /* 処理終了メッセージを出す */
         System.out.println("処理終了");
+        System.out.println(end_time-start_time + "ms");
 
     }
 
